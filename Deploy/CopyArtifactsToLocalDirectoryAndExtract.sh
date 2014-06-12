@@ -1,8 +1,5 @@
 #!/bin/bash
 
-APP_ROOT=$1
-WEB_ROOT=$2
-
 echo "	Create release directories"
 echo "		mkdir -p ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}"
 mkdir -p ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}

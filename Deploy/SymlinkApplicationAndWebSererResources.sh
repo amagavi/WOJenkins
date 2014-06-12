@@ -1,8 +1,5 @@
 #!/bin/bash
 
-APP_ROOT=$1
-WEB_ROOT=$2
-
 echo "	Relink Application Bundle"
 echo "		ln -sf ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/${DEPLOYED_APPLICATION_NAME}.woa ${APP_ROOT}/"
 ln -s ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/${DEPLOYED_APPLICATION_NAME}.woa ${APP_ROOT}/
