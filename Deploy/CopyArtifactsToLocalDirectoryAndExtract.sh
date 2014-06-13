@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "	Create release directories"
-echo "		mkdir -p ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}"
-mkdir -p ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}
-echo "		mkdir -p ${WEB_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/"
-mkdir -p ${WEB_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/
+echo "		mkdir -p -m 755 ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}"
+mkdir -p -m 755 ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}
+echo "		mkdir -p -m 755 ${WEB_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/"
+mkdir -p -m 755 ${WEB_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/
 
 echo "	Copy artifacts to release directories"
 echo "		cp ${WORKSPACE}/Projects/${PROJECT_NAME}/dist/${DEPLOYED_APPLICATION_NAME}-Application.tar.gz ${APP_ROOT}/releases/${DEPLOYED_APPLICATION_NAME}/${BUILD_ID}_${BUILD_NUMBER}/"
