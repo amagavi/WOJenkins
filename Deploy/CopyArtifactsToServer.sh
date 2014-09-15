@@ -23,8 +23,8 @@ for PROJECT in $PROJECTS; do
 
 	echo "scp ${WORKSPACE}/../lastSuccessful/archive/Projects/${PROJECT}/dist/${PROJECT}-WebServerResources.tar.gz ${WOTASKD_USER}@${WOTASKD_HOST}:/tmp/"
 	scp ${WORKSPACE}/../lastSuccessful/archive/Projects/${PROJECT}/dist/${PROJECT}-WebServerResources.tar.gz ${WOTASKD_USER}@$WOTASKD_HOST:/tmp/
-	
+
 	echo "Connect to Deployment Server"
-	echo "ssh ${WOTASKD_USER}@${WOTASKD_HOST} \"(/tmp/ExtractAndDeployWOApplication.sh ${PROJECT} ${BUILD_NUMBER} ${BUILD_ID} ${MONITOR_HOST} ${MONITOR_PORT} ${APP_ROOT} ${WEB_ROOT})\""	
-	ssh ${WOTASKD_USER}@${WOTASKD_HOST} "(/tmp/ExtractAndDeployWOApplication.sh ${PROJECT} ${BUILD_NUMBER} ${BUILD_ID} ${MONITOR_HOST} ${MONITOR_PORT} ${APP_ROOT} ${WEB_ROOT})"	
+	echo "ssh ${WOTASKD_USER}@${WOTASKD_HOST} \"(/tmp/ExtractAndDeployWOApplication.sh ${PROJECT} ${BUILD_NUMBER} ${BUILD_ID} ${MONITOR_HOST} ${MONITOR_PORT} ${APP_ROOT} ${WEB_ROOT} ${RELEASES_DIRCTORY_NAME})\""
+	ssh ${WOTASKD_USER}@${WOTASKD_HOST} "(/tmp/ExtractAndDeployWOApplication.sh ${PROJECT} ${BUILD_NUMBER} ${BUILD_ID} ${MONITOR_HOST} ${MONITOR_PORT} ${APP_ROOT} ${WEB_ROOT} ${RELEASES_DIRCTORY_NAME})"
 done
